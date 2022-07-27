@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: rgb(234, 231, 235);
+}
+
+#main-header {
+    background-color: rgb(133, 25, 133);
+    color: white;
+    padding: 2rem 5%;
+    text-align: center;
+}
+
+#main-header h1{
+    margin-bottom: 0.75rem;
+}
+
+.btn{
+    font: inherit;
+    padding: 0.5rem 1.5rem;
+    background-color: rgb(133, 25, 133);
+    border: 1px solid rgb(133, 25, 133);
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: rgb(180, 21, 180);
+}
+
+.btn-alt{
+    background-color: transparent;
+    /* border: transparent; */
+    color: rgb(133, 25, 133);
+}
+
+.btn-alt:hover{
+    background-color: rgb(212, 166, 212);
+}

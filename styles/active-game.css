@@ -1,0 +1,67 @@
+/* winner name section */
+
+#active-game{
+    text-align: center;
+    margin-top: 2rem;
+}
+
+#active-game #game-over{
+    background-color: rgb(94, 13, 94);
+    color: white;
+    width: 70%;
+    margin: auto;
+    padding: 1rem 0;
+    border-radius: 8px;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+    display: none;
+}
+
+#active-game #game-over h3{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+#active-game #game-over h3 #winner-name{
+    font-size: 2rem;
+    color: #fce9fc;
+}
+
+#active-game #game-over p{
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+/* actual gameboard */
+
+#active-game #your-turn-paragraph{
+    font-size: 2rem;
+    color: rgb(102, 16, 102);
+    margin: 2rem 0;
+}
+
+#active-game #your-turn-paragraph #active-player-name{
+    font-weight: bold;
+}
+
+#active-game #gameboard{
+    display: grid;
+    grid-template-columns: repeat(3, 6rem);
+    grid-template-rows: repeat(3, 6rem);
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 5rem;
+}
+
+#active-game #gameboard li{
+    background-color: rgb(210, 168, 212);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+#active-game #gameboard li:hover{
+    background-color: rgb(104, 28, 104);
+    color: white;
+}

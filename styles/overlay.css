@@ -1,0 +1,83 @@
+/* Dark Background */
+
+#background-dark{
+    background-color: rgb(0,0,0,0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+/* Choose your name - box */
+
+#game-configuration-input{
+    background-color: aliceblue;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgb(102, 94, 102);
+    text-align: center;
+    padding: 2rem;
+    color: rgb(133, 25, 133);
+    width: 40%;
+    position: fixed;
+    top: 15rem;
+    left: calc(50% - 20rem);
+    display: none;
+}
+
+@media (max-width: 75.625rem) {
+    #game-configuration-input{
+        padding: 2rem 0;
+    }
+}
+
+@media (max-width: 62.5rem) {
+    #game-configuration-input{
+        width: 50%;
+    }
+}
+
+@media (max-width: 62.5rem) {
+    #game-configuration-input{
+        width: 60%;
+        left: calc(50% - 15rem);
+    }
+}
+
+#game-configuration-input h2{
+    font-size: 1.8rem;
+    
+}
+
+#game-configuration-input div:first-child{
+    width: 55%;
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#game-configuration-input div:first-child label{
+    margin: 0 0 0.75rem 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+#game-configuration-input div:first-child input{
+    padding: 0.5rem 0;
+    border: 1px solid rgb(133, 25, 133);
+    border-radius: 4px;
+    
+}
+
+#game-configuration-input div:first-child input:focus{
+    outline: rgb(133, 25, 133) solid 0.5px;
+}
+
+#game-configuration-input div:nth-of-type(2){
+    width: 55%;
+    margin: 1rem auto;
+    display: flex;
+    justify-content: space-between;
+ 
+}
