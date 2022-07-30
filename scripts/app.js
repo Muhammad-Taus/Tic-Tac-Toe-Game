@@ -1,3 +1,16 @@
+let playerid = 0;
+
+const players = [
+    {
+        name: '',
+        symbol: 'X'
+    },
+    {
+        name: '',
+        symbol: 'Y'
+    }
+];
+
 // Background blackish overlay and player name input form
 const backgroundDark = document.querySelector('#background-dark');
 const gameConfigurationInput = document.querySelector('#game-configuration-input');

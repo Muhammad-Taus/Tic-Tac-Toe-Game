@@ -1,4 +1,5 @@
-function openPlayerConfig(){
+function openPlayerConfig(event){
+    playerid = +event.target.dataset.playerid;
     backgroundDark.style.display = 'block'; 
     gameConfigurationInput.style.display = 'block'; 
 }
@@ -8,6 +9,7 @@ function closePlayerConfig(){
     gameConfigurationInput.style.display = 'none'; 
     errorMsgPlayerName.textContent = '';
     errorColorInputForm.style.border = '1px solid rgb(133, 25, 133)';
+    document.getElementById('player-name').value = '';
 }
 
 function savePlayerConfig(event){
@@ -23,4 +25,11 @@ function savePlayerConfig(event){
         // console.dir(errorMsgPlayerName);
         return;
     }
+
+    const playerArticle = document.querySelector('#player-'+ playerid +'-data');
+    playerArticle.children[1].textContent = enteredPlayerName;
+
+    players[playerid - 1].name = enteredPlayerName;
+
+    closePlayerConfig();
 }
