@@ -29,6 +29,11 @@ const errorColorInputForm = document.querySelector('#player-name');;
 const editPlayer1BtnElemenet = document.querySelector('#edit-player-1-btn');
 const editPlayer2BtnElemenet = document.querySelector('#edit-player-2-btn');
 
+//Start new game button
+const startNewGameBtn = document.getElementById('startNewGameBtn');
+//Show active game when start new button is clicked
+const activeGame = document.getElementById('active-game');
+
 
 editPlayer1BtnElemenet.addEventListener('click', openPlayerConfig);
 editPlayer2BtnElemenet.addEventListener('click', openPlayerConfig);
@@ -37,3 +42,5 @@ backgroundDark.addEventListener('click', closePlayerConfig);
 configurationCancelBtn.addEventListener('click', closePlayerConfig);
 
 formData.addEventListener('submit', savePlayerConfig);
+
+startNewGameBtn.addEventListener('click', startNewGame);

@@ -3,6 +3,7 @@
 #active-game{
     text-align: center;
     margin-top: 2rem;
+    display: none;
 }
 
 #active-game #game-over{
