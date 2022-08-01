@@ -1,5 +1,13 @@
+const gameData =[
+    [0, 0, 0],
+    [0, 0, 0],
+    [0, 0, 0]
+];
+
 let editedPlayer = 0;
 let activePlayer = 0;
+let currentRound = 1;
+let gameIsOver = false;
 
 const players = [
     {
@@ -41,6 +49,15 @@ const activePlayerName = document.getElementById('active-player-name');
 //game fieds/ list items
 const gameFieldElements = document.querySelectorAll('#gameboard li');
 
+//your-turn-paragraph
+const yourTurnParagraph = document.getElementById('your-turn-paragraph');
+
+//game-over
+const gameOver = document.getElementById('game-over');
+
+//winner-name
+const winnerName = document.getElementById('winner-name');
+
 editPlayer1BtnElemenet.addEventListener('click', openPlayerConfig);
 editPlayer2BtnElemenet.addEventListener('click', openPlayerConfig);
 
@@ -54,3 +71,5 @@ startNewGameBtn.addEventListener('click', startNewGame);
 for(gameFieldElement of gameFieldElements){
     gameFieldElement.addEventListener('click', selectGameField);
 }
+
+
