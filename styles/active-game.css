@@ -3,7 +3,7 @@
 #active-game{
     text-align: center;
     margin-top: 2rem;
-    display: none;
+    /* display: none; */
 }
 
 #active-game #game-over{
@@ -59,10 +59,17 @@
     justify-content: center;
     align-items: center;
     font-size: 2rem;
+    font-weight: bold;
     cursor: pointer;
 }
 
 #active-game #gameboard li:hover{
     background-color: rgb(104, 28, 104);
     color: white;
+}
+
+#active-game #gameboard li.disabled{
+    background-color: rgb(210, 168, 212);
+    color: black;
+    cursor: default;
 }

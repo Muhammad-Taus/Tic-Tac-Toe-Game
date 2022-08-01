@@ -1,5 +1,5 @@
 function openPlayerConfig(event){
-    playerid = +event.target.dataset.playerid;
+    editedPlayer = +event.target.dataset.playerid;
     backgroundDark.style.display = 'block'; 
     gameConfigurationInput.style.display = 'block'; 
 }
@@ -26,10 +26,12 @@ function savePlayerConfig(event){
         return;
     }
 
-    const playerArticle = document.querySelector('#player-'+ playerid +'-data');
+    //player name
+    const playerArticle = document.querySelector('#player-'+ editedPlayer +'-data');
+    
     playerArticle.children[1].textContent = enteredPlayerName;
 
-    players[playerid - 1].name = enteredPlayerName;
+    players[editedPlayer - 1].name = enteredPlayerName;
 
     closePlayerConfig();
 }

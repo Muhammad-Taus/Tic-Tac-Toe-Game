@@ -1,4 +1,5 @@
-let playerid = 0;
+let editedPlayer = 0;
+let activePlayer = 0;
 
 const players = [
     {
@@ -7,7 +8,7 @@ const players = [
     },
     {
         name: '',
-        symbol: 'Y'
+        symbol: 'O'
     }
 ];
 
@@ -34,6 +35,11 @@ const startNewGameBtn = document.getElementById('startNewGameBtn');
 //Show active game when start new button is clicked
 const activeGame = document.getElementById('active-game');
 
+//active-player-name
+const activePlayerName = document.getElementById('active-player-name');
+
+//game fieds/ list items
+const gameFieldElements = document.querySelectorAll('#gameboard li');
 
 editPlayer1BtnElemenet.addEventListener('click', openPlayerConfig);
 editPlayer2BtnElemenet.addEventListener('click', openPlayerConfig);
@@ -44,3 +50,7 @@ configurationCancelBtn.addEventListener('click', closePlayerConfig);
 formData.addEventListener('submit', savePlayerConfig);
 
 startNewGameBtn.addEventListener('click', startNewGame);
+
+for(gameFieldElement of gameFieldElements){
+    gameFieldElement.addEventListener('click', selectGameField);
+}
